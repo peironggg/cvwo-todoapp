@@ -14,7 +14,7 @@ export class TodoItem extends Component {
             }
     }
     render() {
-        const {id, title} = this.props.todo;
+        const {id, title, completed} = this.props.todo;
         return (
             <div style = {this.getStyle()}>
             <p>
@@ -22,7 +22,7 @@ export class TodoItem extends Component {
                     (this, id)}
                 /> {' '}
                 {title}
-                <button onClick = {this.props.delTodo.bind(this, id)} 
+                <button onClick = {this.props.delTodo.bind(this, id, completed)} 
                     style = {btnStyle}>x</button>
                 </p>
             </div>

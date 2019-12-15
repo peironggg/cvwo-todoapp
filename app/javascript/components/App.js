@@ -26,13 +26,15 @@ class App extends Component {
   }
 
   // Toggle Checkbox
-  markComplete = (id) => {
-    this.setState({todos: this.state.todos.map(todo => {
-      if (todo.id === id) {
-        todo.completed = !todo.completed
-      }
-      return todo;
-    })});
+  markComplete = (id, completed) => {
+    axios.put(`/todos/${id}`, {completed: !completed})
+      .then(response => this.setState({todos: this.state.todos.map(
+        todo => {
+        if (todo.id === id) {
+          todo.completed = !todo.completed
+        }
+        return todo;
+      })}));
   }
 
   // Delete Todo
