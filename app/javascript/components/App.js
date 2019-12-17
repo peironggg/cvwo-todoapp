@@ -46,9 +46,14 @@ class App extends Component {
 
   // Add Todo
   addTodo = (title) => {
+    const titleParts = title.split('#');
+    const titleName = titleParts[0].trim();
+    const category = titleParts[1];
+
     axios.post('/todos', {
-      title,
-      completed: false
+      title: titleName,
+      completed: false,
+      category
     }).then(response => this.setState({todos: 
         [...this.state.todos,response.data]}))
         .catch(err => console.log(err));

@@ -3,7 +3,9 @@
 one:
   title: MyString
   completed: false
+  category: MyString
 
 two:
   title: MyString
   completed: false
+  category: MyString
