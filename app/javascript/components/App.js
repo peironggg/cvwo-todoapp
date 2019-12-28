@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {Switch} from 'react-router-dom';
 import Header from './layout/Header';
 import Todos from './Todos';
 import AddTodo from './AddTodo';

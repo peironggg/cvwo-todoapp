@@ -3,25 +3,12 @@ import {Link} from 'react-router-dom';
 
 function Header() {
     return (
-        <header style = {headerStyle}> 
-        <h1>TodoList</h1>
-        <Link style = {linkStyle} to = "/">Home</Link> |
-        <Link style = {linkStyle} to = "/about"> About</Link>
+        <header className = "bg-black py-3 px-10 font-mono text-white text-center"> 
+        <h1>Your Todo List!</h1>
+        <Link className = "font-sans" to = "/">Home</Link> |
+        <Link className = "px-2 font-sans" to = "/about">About</Link>
         </header>
     )
-}
-
-const headerStyle = {
-    fontFamily: "Helvetica",
-    background: '#333',
-    color: '#fff',
-    textAlign: 'center',
-    padding: '10px'
-}
-
-const linkStyle = {
-    color: '#fff',
-    textDecoration: 'none'
 }
 
 export default Header
