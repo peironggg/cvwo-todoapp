@@ -25,7 +25,7 @@ export class AddTodo extends Component {
                          focus:outline-none focus:bg-gray-100"
                     input = 'text'
                     name = 'title'
-                    placeholder = 'Add Todo ...'
+                    placeholder = 'Add Todo in this format: Todo #Category'
                     value = {this.state.title}
                     onChange = {this.onChange}
                     />
