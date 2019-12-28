@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 export class TodoCategory extends Component {
     render() {
         return (
-            <div>
+            <div className = "font-sans py-2 px-5 bg-gray-100">
             <h2>{this.props.category}</h2>
 
             <ul>

@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import './App.css';
 
 export class AddTodo extends Component {
     state = {
@@ -19,18 +20,20 @@ export class AddTodo extends Component {
             <form onSubmit = {this.onSubmit}
                 style = {{display: 'flex'}}>
                 <input
+                    className = "bg-gray-200 appearance-none border-2 border-gray-200 rounded\
+                         w-full py-2 px-4 text-gray-700 leading-tight\
+                         focus:outline-none focus:bg-gray-100"
                     input = 'text'
                     name = 'title'
-                    style = {{flex: '10', padding: '5px'}}
                     placeholder = 'Add Todo ...'
                     value = {this.state.title}
                     onChange = {this.onChange}
                     />
-                <input
-                    style = {btnStyle}
+                <input 
+                    className = "bg-gray-300 hover:bg-gray-400 text-gray-800 \
+                    font-bold py-2 px-4 rounded inline-flex items-center"
                     type = 'submit'
                     value = 'Submit'
-                    className = "btn"
                     />
             </form>
         )
@@ -40,15 +43,6 @@ export class AddTodo extends Component {
 // PropTypes
 AddTodo.propTypes = {
     addTodo: PropTypes.func.isRequired
-}
-
-const btnStyle = {
-    display: 'inline-block',
-    border: 'none',
-    background: '#555',
-    color: '#fff',
-    padding: '7px 20px',
-    cursor: 'pointer'
 }
 
 export default AddTodo
