@@ -5,13 +5,13 @@ import PropTypes from 'prop-types';
 
 class Todos extends Component {
 	// Remove duplicate values from an array, and return a new array
-	unique = (array) => {
-		array.filter((item, index) => {
-			array.indexOf(item) === index;
-		});
-	}
+	unique = (array) => 
+	array.filter((item, index) => 
+		array.indexOf(item) === index
+	)
+
   	render() {
-	const categories = this.props.todos.map(todo => todo.category)
+	const categories = this.unique(this.props.todos.map(todo => todo.category))
 	console.log(categories)
 
 	// Create every category and display them
