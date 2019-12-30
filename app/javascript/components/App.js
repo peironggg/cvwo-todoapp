@@ -49,7 +49,8 @@ class App extends Component {
   addTodo = (title) => {
     const titleParts = title.split('#');
     const titleName = titleParts[0].trim();
-    const category = titleParts[1];
+    const smallCategory = titleParts[1];
+    const category = smallCategory[0].toUpperCase() + smallCategory.slice(1)
 
     axios.post('/todos', {
       title: titleName,
